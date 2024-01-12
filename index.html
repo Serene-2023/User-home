@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Goldenland serene User</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+    integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <style>
+    body {
+      font-family: Kanit, sans-serif;
+      background: rgb(252, 233, 233);
+      background: linear-gradient(0deg, rgba(252, 233, 233, 1) 0%, rgba(224, 244, 241, 1) 26%, rgba(255, 255, 255, 1) 71%);
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      background-color: skyblue;
+    }
+
+    .list {
+      background-color: #00ECB3;
+      padding: 1.8em 1.2em;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      border-radius: 0.6em;
+    }
+
+    .qBox {
+      border: solid 2px #525150 !important;
+      padding: 1rem;
+      margin: 0 10px;
+      border-radius: 13px;
+      max-width: 100%;
+      margin: auto;
+    }
+
+    label {
+      color: black;
+    }
+
+    .container {
+      max-width: 600px;
+    }
+
+    button[type="submit"] {
+      font-family: Kanit, sans-serif;
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      width: 100%;
+      margin: 0 auto;
+      margin-top: 10px;
+      padding: 3%;
+      background: #F6D307;
+      border: none;
+      border-radius: 5px;
+      font-size: 17px;
+      border-top-style: none;
+      border-right-style: none;
+      border-left-style: none;
+      color: #000;
+      cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+      background: #0733F6;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <center>
+    <br />
+    <img src="https://i.postimg.cc/YSb7Jxj5/serene3.gif" style="width:200px; height:auto; padding-bottom: 10px; ">
+    <div class="form-group mb-2">
+      <label for="searchtext">
+        <h3>ระบบลงทะเบียน(ลูกบ้าน)</h3>
+        <h5 class="text-center text-danger">โกลเด้นแลนด์ ซีรีน</h5>
+      </label>
+    </div>
+  </center>
+
+  <div class="container list">
+    <form id="myForm" class="needs-validation my-4" novalidate>
+      <div class="row justify-content-start g-3">
+        <div class="col-12">
+          <label for="name1"><h5 class="text-primary">บ้านเลขที่ *</h5></label>
+          <input type="text" id="name1" name="name1" class="form-control" placeholder="เช่น 998/99" required>
+          <div class="invalid-feedback">
+            กรุณากรอกบ้านเลขที่
+          </div>
+        </div>
+
+        <div class="col-12">
+          <label for="name2"><h5 class="text-primary">เลขที่โฉนด (ถ้าจำได้)</h5></label>
+          <input type="text" id="name2" name="name2" value="-" class="form-control" placeholder="เลขที่โฉนด" >
+          <div class="invalid-feedback">
+            กรุณากรอก เลขที่โฉนด
+          </div>
+        </div>
+
+        <div class="col-12">
+          <label for="name3"><h5 class="text-primary">ซอย *</h5></label>
+          <select name="name3" id="name3" class="form-control" required>
+            <option selected="" value="">เลือก..</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+          </select>
+        </div>
+     
+
+
+      <div class="col-12">
+        <label for="name4"><h5 class="text-primary">ชื่อ-สกุล *</h5></label>
+        <input type="text" id="name4" name="name4" class="form-control" placeholder="ชื่อ-สกุล" required>
+        <div class="invalid-feedback">
+          กรุณากรอกชื่อ-สกุล
+        </div>
+      </div>
+
+       <div class="col-12">
+          <label for="name5"><h5 class="text-primary">การอยู่อาศัย(เจ้าบ้าน)(ผู้อาศัย)(เช่า) *</h5></label>
+          <select name="name5" id="name5" class="form-control" required>
+            <option selected="" value="">เลือก การอยู่อาศัย..</option>
+            <option value="เจ้าของบ้าน">เจ้าของบ้าน</option>
+            <option value="เจ้าของร่วม">เจ้าของร่วม</option>
+            <option value="ผู้อาศัย">ผู้อาศัย</option>
+            <option value="ผู้เช่า">ผู้เช่า</option>
+            <option value="ยังไม่มีคนอยู่">ยังไม่มีคนอยู่</option>
+            <option value="บ้านร้าง">บ้านร้าง</option>
+          </select>
+        </div>
+
+
+      <div class="col-12">
+        <label for="name6"><h5 class="text-primary">จำนวนสมาชิกในบ้าน *</h5></label>
+        <input type="tel" id="name6" name="name6" class="form-control" placeholder="จำนวนสมาชิกในบ้าน" required>
+        <div class="invalid-feedback">
+          กรุณากรอก จำนวนสมาชิก
+        </div>
+      </div>
+
+      <div class="col-12">
+        <label for="name7"><h5 class="text-primary">เบอร์ติดต่อ *</h5></label>
+        <input type="tel" id="name7" name="name7" maxlength="10" class="form-control" placeholder="เบอร์ติดต่อ"required>
+        <div class="invalid-feedback">
+          กรุณาใส่เบอร์โทร ด้วยครับ
+        </div>
+      </div>
+
+      <div class="col-12">
+        <label for="name8"><h5 class="text-primary">E-mail (จะใช้ในการออกบิลส่วนกลาง) *</h5></label>
+        <input type="email" id="name8" name="name8" class="form-control" placeholder="E-mail ที่ใช้งานได้" required>
+        <div class="invalid-feedback">
+          กรุณากรอก E-mail เพื่อจะได้รับข้อมูลส่วนกลาง
+        </div>
+      </div>
+
+      <div class="col-12">
+        <label for="name9"><h5 class="text-primary">Line ID</h5></label>
+        <input type="text" id="name9" name="name9" class="form-control" placeholder="Line ID">
+        <div class="invalid-feedback">
+          กรุณากรอก Line ID
+        </div>
+      </div>
+
+
+
+      <div class="col-12">
+        <label for="name10"><h5 class="text-primary">หมายเหตุ</h5></label>
+        <input type="text" id="name10" name="name10" class="form-control" placeholder="ข้อมูลเพิ่มเติม">
+        <div class="invalid-feedback">
+          ข้อมูลเพิ่มเติม
+        </div>
+      </div>
+
+
+      <!-- <div class="col-12">
+        <label for="place"><h5 class="text-primary">รูปเจ้าของบ้าน</h5></label>
+        <input type="file" id="myfile" name="myfile" class="form-control" required>
+        <div class="invalid-feedback">
+          กรุณาอัพโหลดรูปเจ้าของบ้าน
+        </div>
+      </div> -->
+
+      <div class="col-12 text-center">
+        <button type="submit" class="btn btn-warning w-100"><i
+            class="bi bi-send-fill"></i>&nbsp;ลงทะเบียนสมาชิก</button>
+      </div>
+  </div>
+      <div class="form-group mb-2">
+        <h5 class="text-center text-danger"></h5>
+          <h5 class="text-center text-danger">เมื่อลงทะเบียนเสร็จแล้ว</h5>
+        <h5 class="text-center text-danger">รอแอดมิน ตรวจสอบข้อมูล</h5>
+        <h5 class="text-center text-danger">จะมีข้อความตอบกลับ ให้เข้าระบบ</h5>
+        <h6 class="text-center text-primary">*นิติบุคคลหมู่บ้านจัดสรร โกลเด้นแลนด์ ซีรีน*</h6>
+      </div>
+  </form>
+  </div>
+
+
+  <script>
+    const scriptUrl ='https://script.google.com/macros/s/AKfycbzt6PpYBwFJpRgmqjabcXdPHYneC84EbdVDkL0zXpE4rNhsY2i1KJTDIpoW0J_dwUR8Yw/exec'
+    var uid
+    $(document).ready(() => {
+      liff.init({
+        liffId: '2000143615-81jg2jz0',
+        withLoginOnExternalBrowser: true
+      })
+      liff.ready.then(() => {
+        console.log('liff ready')
+      })
+    })
+
+    function submit() {
+      $.LoadingOverlay('show')
+      let data = {
+        opt: 'savedata',
+        uid: liff.getDecodedIDToken().sub,
+        name1: $('#name1').val(),
+        name2: $('#name2').val(),
+        name3: $('#name3').val(),
+        name4: $('#name4').val(),
+        name5: $('#name5').val(),
+        name6: $('#name6').val(),
+        name7: $('#name7').val(),
+        name8: $('#name8').val(),
+        name9: $('#name9').val(),
+        name10: $('#name10').val(),
+     
+      }
+
+
+      $.ajax({
+        method: "POST",
+        url: scriptUrl,
+        data: data,
+        dataType: 'json',
+        success: function (res) {
+          $.LoadingOverlay('hide')
+          if (res.status == 'success') {
+            // reset the form
+            $('#myForm')[0].reset()
+            return Swal.fire({
+              icon: 'success',
+              title: 'ลงทะเบียนเรียบร้อย รอตรวจสอบ',
+              allowOutsideClick: false,
+              confirmButtonText: 'ตกลง'
+            })
+          }
+          return Swal.fire({
+            icon: 'error',
+            title: 'เกิดข้อผิดพลาด',
+            allowOutsideClick: false,
+            confirmButtonText: 'ตกลง'
+          })
+        },
+        error: function (err) {
+          console.log(err)
+          $.LoadingOverlay('hide')
+          alert('บันทึกข้อมูลไม่สำเร็จ')
+        }
+      });
+    }
+
+   
+
+
+  </script>
+  <script>
+    (() => {
+      'use strict'
+
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      const forms = document.querySelectorAll('.needs-validation')
+
+      // Loop over them and prevent submission
+      Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+          event.preventDefault()
+          if (!form.checkValidity()) {
+            event.stopPropagation()
+            form.classList.add('was-validated')
+            $('#myForm').find(":invalid").first().focus();
+          } else {
+            submit()
+          }
+
+        }, false)
+      })
+    })()
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+  <!-- <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@2.1.7/dist/loadingoverlay.min.js"></script>
+
+
+  <br />
+  <div class="text-center p-4 col-12 mt-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    9one © 2023
+  </div>
+
+</body>
+
+</html>
